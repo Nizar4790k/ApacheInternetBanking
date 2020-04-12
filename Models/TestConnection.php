@@ -1,8 +1,9 @@
-<?php
+0<?php
 
-require_once  "/Models/ApacheNetBankingDb.php";
+    require_once ( __DIR__."/ApacheNetBankingDb.php");
 
 $clienteTable = new ClienteTable();
+
 
 $conn = $clienteTable->getConnection();
 

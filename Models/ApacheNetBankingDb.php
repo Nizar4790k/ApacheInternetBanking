@@ -2,34 +2,30 @@
 
     abstract class DbSet{
       
-    private $serverName;
-    private $userName;
+    private $dsn;
+    private $user;
     private $password;
-    private $dbName;
     private $connection;
 
 
 
-
-    private function  __constructor(){
-        $serverName="localhost";
-        $userName="root";
-        $password="root12";
-        $dbName="ApacheNetBanking";         
+    protected function  __constructor(){
         
-        echo "severName";
+        
         
     }
     
     public   function getConnection(){
-        return new mysql_li($serverName,$userName,$password);
+       
+        
+        return  new PDO("mysql:host=127.0.0.1;dbname=apachenetbanking","root", "root12");
     }
 
 
        public abstract function add($object);
        public abstract function find($id);
        public abstract function remove($object);
-       public abstract function update($update);
+       public abstract function update($object);
        public abstract function getAll();
          
         
@@ -38,10 +34,15 @@
 
      class ClienteTable extends DbSet{
         
-         function __construct() {
-             parent::_construct();
+     public function __construct() {
+             parent::__constructor();
+         
+             
          }
 
+         public function getConnection(): \PDO {
+             return  parent::getConnection();
+         }
 
          public function add($object) {
         
@@ -65,7 +66,6 @@
 
 }
 
-    
 
  class ApacheNetBankingDb{
     
