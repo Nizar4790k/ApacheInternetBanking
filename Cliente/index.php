@@ -41,6 +41,10 @@ echo '
             <label>Telefono</label>
         </th>
         
+          <th>
+            <label>Direccion</label>
+        </th>
+        
         <th>
             <label>Email</label>
         </th>
@@ -57,72 +61,82 @@ echo '
           $pdo=new PDO("mysql:host=127.0.0.1;dbname=apachenetbanking","root", "root12");
      $data = $pdo->query("SELECT * FROM CLIENTE")->fetchAll();
 
+ 
     foreach ($data as $row)
     {
+    echo '<tr> ';
+    echo  '<td>';
+    echo $row["idCliente"];
+    $idCliente=$row["idCliente"];
+    echo '</td>';
 
+    echo  '<td>';
+    echo $row["nombre"];
+    echo '</td>';
 
-     
-     echo'<tr> \n
-     <td>';
-        
-    echo $row['idCliente']."<br />\n";
-   
-    echo'<tr> \n
-     <td>';
-     
-        echo $row['nombre']."<br />\n";
-           
-     echo'<tr> \n
-     <td>';
-             
-        echo $row['apellido']."<br />\n";
-             
-      echo'<tr> \n
-     <td>';
-             
-      echo $row['cedula']."<br />\n";
-             
-      echo'<tr> \n
-     <td>';
-      
-     echo $row['telefono']."<br />\n";
-     echo'<tr> \n  <td>';
-     
-     echo $row['email']."<br />\n";
-     echo'<tr> \n  <td>';
-     
-     echo $row['sexo']."<br />\n";
-     echo'<tr> \n  <td>';
-     
-
-      /*
-      
-      @Html.ActionLink("Edit", "Edit", new { id = item.IdPaciente }) |
-        @Html.ActionLink("Details", "Details", new { id = item.IdPaciente }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.IdPaciente })
-        */
-     echo'<tr> \n
-     <td>';
-        
-
-
-     echo '</table>';
-
-
- echo '
-<br /> \n
-<br /> \n
-<br /> \n';
+    echo  '<td>';
+    echo $row["apellido"];
+    echo '</td>';
     
- echo '       
- </body> \n
-</html> \n ';
-
-
-
-
+    echo  '<td>';
+    echo $row["cedula"];
+    echo '</td>';
+    
+     echo  '<td>';
+     echo $row["telefono"];
+    echo '</td>';
+    
+    echo  '<td>';
+    echo $row["direccion"];
+    echo '</td>';
+    
+    echo  '<td>';
+    echo $row["email"];
+    echo '</td>';
+    
+    echo  '<td>';
+    echo $row["sexo"];
+    echo '</td>';
+    
+     echo"<td> ".
+            "<a href=edit.php?idCliente=",urlencode($idCliente),">Edit</a>". "| <a href=details.php?idCliente=",urlencode($idCliente),">Details</a>". "| <a href=delete.php?idCliente=",urlencode($idCliente),">Delete</a>".
+             
+            "</td>";
+     
+     /*
+            . "| <a href=''>Detalles</a>  | <a href=''>Eliminar</a> ". 
+             
+             */
+    echo' </tr>';
+    
+       
+    
+    
     }
+    echo '</table>';
+ 
+    
+    echo '<br />';
+    echo '<br />';
+    echo '<br />';
+    
+    echo '</body>';
+    echo '</html>';
+    
 
+
+    
+
+ 
+ 
+
+
+
+
+
+
+
+   
 
 
 
