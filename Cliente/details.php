@@ -1,7 +1,13 @@
 <?php
 
-$idCliente=$_GET["idCliente"];
 
+
+
+$idCliente=$_GET["idCliente"];
+getDetails($idCliente);
+ echo "<a href=index.php>Volver al inicio</a>";
+
+function getDetails($idCliente){
 
 
     $pdo=new PDO("mysql:host=127.0.0.1;dbname=apachenetbanking","root", "root12");
@@ -29,12 +35,7 @@ $idCliente=$_GET["idCliente"];
         'Sexo:'.$row["sexo"]."<br/>";
     }
     
-    echo "<a href=index.php>Volver al inicio</a>";
 
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+}
