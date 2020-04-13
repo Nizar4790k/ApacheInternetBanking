@@ -11,8 +11,8 @@ class Cliente{
     private $email;
     private $sexo;
     
-    public function __construct($nombre,$apellido,$cedula,$direccion,$telefono,$emai,$sexo) {
-        $this->$nombre=$nombre;
+    public function __construct($nombre,$apellido,$cedula,$direccion,$telefono,$email,$sexo) {
+        $this->nombre=$nombre;
         $this->apellido=$apellido;
         $this->cedula=$cedula;
         $this->direccion=$direccion;
@@ -43,8 +43,14 @@ class Cliente{
     }
     
         public function  getEmail(){
-        return $this->telefono;
+        return $this->email;
     }
+    
+    
+     public function  getSexo(){
+        return $this->sexo;
+    }
+    
     
     public function setNombre($nombre){
         $this->nombre=$nombre;
@@ -57,8 +63,6 @@ class Cliente{
       public function setCedula($cedula){
         $this->cedula=$cedula;
     }
-   
- 
     
       public function setTelefono($telefono){
         $this->telefono=$telefono;
@@ -70,5 +74,7 @@ class Cliente{
        public function setSexo($sexo){
         $this->sexo=$sexo;
     }
+    
+   
     
 }

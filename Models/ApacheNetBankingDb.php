@@ -1,5 +1,8 @@
 <?php
 
+
+    namespace DbMangment{
+
     abstract class DbSet{
       
     private $dsn;
@@ -15,7 +18,7 @@
         
     }
     
-    public   function getConnection(){
+    protected function getConnection(){
        
         
         return  new PDO("mysql:host=127.0.0.1;dbname=apachenetbanking","root", "root12");
@@ -40,11 +43,17 @@
              
          }
 
-         public function getConnection(): \PDO {
+         protected function getConnection(): \PDO {
              return  parent::getConnection();
          }
 
-         public function add($object) {
+         public function add($cliente) {
+             
+             $connection = $this->getConnection();
+             
+           
+             
+             
         
     }
 
@@ -81,12 +90,14 @@
     public function getClienteTable(){
         return $clienteTable;
     }
+  
     
-    
-
-    
+ }
+   
     
 }
+
+
 
 /* 
  * To change this license header, choose License Headers in Project Properties.
