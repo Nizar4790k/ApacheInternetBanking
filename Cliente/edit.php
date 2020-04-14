@@ -30,7 +30,6 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-
 <html>
     <head>
         <title>Cliente</title>
@@ -42,8 +41,6 @@ and open the template in the editor.
     
         
         <form method="POST" action="edit2.php">
-
-
     <div class="form-horizontal">
         <h4> Editar Cliente</h4>
         <hr />
@@ -55,11 +52,7 @@ and open the template in the editor.
                <!-- @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" }) --->
             </div>
         </div>
-
         <br>
-
-
-
         <div class="form-group">
             <label>Nombre</label>
             <div class="col-md-10">
@@ -67,7 +60,6 @@ and open the template in the editor.
                <!-- @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" }) --->
             </div>
         </div>
-
         <br>
         
         <div class="form-group">
@@ -85,7 +77,6 @@ and open the template in the editor.
                     -->
             </div>
         </div>
-
          <br>
         
          <div class="form-group">
@@ -104,7 +95,6 @@ and open the template in the editor.
                     @Html.ValidationMessage("Cedula","La cedula que acaba de ingresar esta duplicada",new { @class = "text-danger" })
                 }
                 -->
-
             </div>
             
         </div>
@@ -126,7 +116,6 @@ and open the template in the editor.
                     @Html.ValidationMessage("Cedula","La cedula que acaba de ingresar esta duplicada",new { @class = "text-danger" })
                 }
                 -->
-
             </div>
             
         </div>
@@ -192,7 +181,6 @@ and open the template in the editor.
                 }
    
                echo '
-
                 <!--
                 @Html.ValidationMessageFor(model => model.Cedula, "", new { @class = "text-danger" })
                 
@@ -201,7 +189,6 @@ and open the template in the editor.
                     @Html.ValidationMessage("Cedula","La cedula que acaba de ingresar esta duplicada",new { @class = "text-danger" })
                 }
                 -->
-
             </div>
             
         </div>
@@ -209,7 +196,6 @@ and open the template in the editor.
         
         <br>
         <div>
-
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" name ="editButton" value="editar"  />
@@ -224,19 +210,7 @@ and open the template in the editor.
     
 </div>
  </form>
-
     </body>
 </html>
 ';
    }
-   
-   
-   
-   
-   
-   
-   
-   
-
-
-
