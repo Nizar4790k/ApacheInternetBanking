@@ -45,7 +45,7 @@ and open the template in the editor.
 
 
     <div class="form-horizontal">
-        <h4> Crear Cliente</h4>
+        <h4> Editar Cliente</h4>
         <hr />
         
           <div class="form-group">

@@ -5,7 +5,7 @@
    $pdo=new PDO("mysql:host=127.0.0.1;dbname=apachenetbanking","root", "root12");
         
          $cliente = new Cliente($_POST["nombre"],$_POST["apellido"],$_POST["cedula"],$_POST["direccion"],
-               $_POST["telefono"],$_POST["email"],$_POST["sexo"],0);
+               $_POST["telefono"],$_POST["email"],$_POST["sexo"]);
    
           
          
