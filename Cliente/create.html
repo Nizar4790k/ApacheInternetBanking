@@ -10,6 +10,14 @@ and open the template in the editor.
         <title>Cliente</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+        
     </head>
     <body>
         
@@ -25,7 +33,7 @@ and open the template in the editor.
         <div class="form-group">
             <label>Nombre</label>
             <div class="col-md-10">
-                <input type="text" name="nombre">
+                <input type="text" name="nombre" class="form-control">
                <!-- @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" }) --->
             </div>
         </div>
@@ -35,7 +43,7 @@ and open the template in the editor.
         <div class="form-group">
             <label>Apellido</label>
             <div class="col-md-10">
-                <input type="text" name='apellido'>
+                <input type="text" name='apellido' class="form-control">
              
                 <!--
                 @Html.ValidationMessageFor(model => model.Cedula, "", new { @class = "text-danger" })
@@ -56,7 +64,7 @@ and open the template in the editor.
              <label>Cedula</label>
              <!--@Html.LabelFor(model => model.Cedula, htmlAttributes: new { @class = "control-label col-md-2" })-->
             <div class="col-md-10">
-                <input type="text" name="cedula">
+                <input type="text" name="cedula" class="form-control">
                 
                 <!--
                 @Html.ValidationMessageFor(model => model.Cedula, "", new { @class = "text-danger" })
@@ -78,7 +86,7 @@ and open the template in the editor.
           <label>Direccion</label>
              <!--@Html.LabelFor(model => model.Cedula, htmlAttributes: new { @class = "control-label col-md-2" })-->
             <div class="col-md-10">
-                <input type="text" name="direccion">
+                <input type="text" name="direccion" class="form-control">
                 
                 <!--
                 @Html.ValidationMessageFor(model => model.Cedula, "", new { @class = "text-danger" })
@@ -101,7 +109,7 @@ and open the template in the editor.
              <div class="form-group">
             <label>Email</label>
             <div class="col-md-10">
-                <input type="text" name="email">
+                <input type="text" name="email" class="form-control">
              
                 <!--
                 @Html.ValidationMessageFor(model => model.Cedula, "", new { @class = "text-danger" })
@@ -118,7 +126,7 @@ and open the template in the editor.
                  <div class="form-group">
             <label>Telefono</label>
             <div class="col-md-10">
-                <input type="text" name="telefono">
+                <input type="text" name="telefono" class="form-control">
              
                 <!--
                 @Html.ValidationMessageFor(model => model.Cedula, "", new { @class = "text-danger" })
@@ -134,13 +142,13 @@ and open the template in the editor.
             <br/>
         
             <div>
-          <label>Sexo</label>
+          <label >Sexo</label>
              <!--@Html.LabelFor(model => model.Cedula, htmlAttributes: new { @class = "control-label col-md-2" })-->
             <div class="col-md-10">
-                <label>Masculino</label>
+                <label class="radio-inline">Masculino</label>
                 <input type="radio" name="sexo" value="masculino" checked>
                 <br/>
-                <label>Femenino</label>
+                <label class="radio-inline">Femenino</label>
                 <input type="radio" name="sexo" value="femenino">
                 
                 <!--

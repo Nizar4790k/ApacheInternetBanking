@@ -1,30 +1,4 @@
-<?php
-
-
-
-
-$idCliente=$_GET["idCliente"];
-getDetails($idCliente);
- echo "<a href=index.php>Volver al inicio</a>";
-
-function getDetails($idCliente){
-
-
-    $pdo=new PDO("mysql:host=127.0.0.1;dbname=apachenetbanking","root", "root12");
-     
-    
-   $data = $pdo->query("SELECT * FROM CLIENTE WHERE idCliente= $idCliente")->fetchAll();
-  
-
-    /*
-    $sth = $pdo->prepare("SELECT * FROM CLIENTE WHERE idCliente= ?") ->execute([$idCliente]);
-    $data=$sth->fetchAll();        No funciona
-   */
-    
-   
-    
-     foreach ($data as $row){
-        echo'<!DOCTYPE html>
+<!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -55,48 +29,48 @@ and open the template in the editor.
             <b>Codigo de paciente:</b>
         </dt>
 
-        <dd>'
-            .$row["idPaciente"] .'
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
         </dd>
 
         <dt>
             <b>Nombre:</b>
         </dt>
 
-          <dd>'
-            .$row["nombre"] .'
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
         </dd>
 
         <dt>
              <b>Apellido:</b>
         </dt>
 
-         <dd>'
-            .$row["apellido"] .'
+        <dd>
+            @Html.DisplayFor(model => model.Cedula)
         </dd>
 
         <dt>
             <b>Cedula:</b>
         </dt>
 
-            <dd>'
-            .$row["cedula"] .'
+        <dd>
+            @Html.DisplayFor(model => model.Asegurado)
         </dd>
         
         <dt>
             <b>Telefono:</b>
         </dt>
 
-            <dd>'
-            .$row["telefono"] .'
+        <dd>
+            @Html.DisplayFor(model => model.Asegurado)
         </dd>
         
            <dt>
             <b>Direccion:</b>
         </dt>
 
-            <dd>'
-            .$row["direccion"] .'
+        <dd>
+            @Html.DisplayFor(model => model.Asegurado)
         </dd>
         
         
@@ -104,30 +78,24 @@ and open the template in the editor.
             <b>Email:</b>
         </dt>
 
-            <dd>'
-            .$row["email"] .'
+        <dd>
+            @Html.DisplayFor(model => model.Asegurado)
         </dd>
 
          <dt>
             <b>Sexo:</b>
         </dt>
 
-           <dd>'
-            .$row["sexo"] .'
+        <dd>
+            @Html.DisplayFor(model => model.Asegurado)
         </dd>
 
         
     </dl>
 </div>
-
-
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdPaciente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
     </body>
 </html>
-';
-      
-    }
-    
-
-
-
-}
