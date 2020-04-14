@@ -21,6 +21,26 @@ class Cliente{
         $this->sexo=$sexo;
         
     }
+    /*
+        public function __construct($idCliente,$nombre,$apellido,$cedula,$direccion,$telefono,$email,$sexo) {
+        
+        $this->idCliente=$idCliente;
+        $this->nombre=$nombre;
+        $this->apellido=$apellido;
+        $this->cedula=$cedula;
+        $this->direccion=$direccion;
+        $this->telefono=$telefono;
+        $this->email=$email;
+        $this->sexo=$sexo;
+        
+    }
+     * 
+     * 
+     */
+    
+      public function  getIdCliente(){
+        return $this->idCliente;
+    }
     
     public function  getNombre(){
         return $this->nombre;
@@ -73,6 +93,10 @@ class Cliente{
     }
        public function setSexo($sexo){
         $this->sexo=$sexo;
+    }
+    
+    public function setIdCliente($idCliente){
+        $this->idCliente=$idCliente;
     }
     
    
