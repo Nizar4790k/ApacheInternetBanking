@@ -47,16 +47,16 @@ and open the template in the editor.
        <h2>Details</h2>
 
 <div>
-    <h4>Paciente</h4>
+    <h4>Cliente</h4>
     <hr />
     <dl class="dl-horizontal">
 
         <dt>
-            <b>Codigo de paciente:</b>
+            <b>Codigo de cliente:</b>
         </dt>
 
         <dd>'
-            .$row["idPaciente"] .'
+            .$row["idCliente"] .'
         </dd>
 
         <dt>
