@@ -29,7 +29,7 @@ function getDetails($idPrestamo){
          'Monto:'.$row["monto"]."<br/>".
         'Tiempo:'.$row["tiempo"]."<br/>".
         'Modalidad de tiempo:'.$row["unidadTiempo"]."<br/>".
-         'Cuota:'.($row["monto"]/$row["tiempo"]) .$row["unidadTIempo"] ."<br/>".     
+         'Cuota:'.($row["monto"]/$row["tiempo"]) .$row["unidadTiempo"] ."<br/>".     
         'Codigo de Cliente:'.$row["idCliente"]."<br/>";
         
     }

@@ -26,7 +26,7 @@
                     ->execute([$prestamo->getMonto(),$prestamo->getTiempo(),$prestamo->getUnidadTiempo(),$prestamo->getIdCliente()]);
              
            
-           
+                          header( 'Location: index.php' ) ;
 
 
 
